@@ -18,8 +18,12 @@ for(let contador = 0; contador < listaDeTeclas.length; contador++){
     };
    // console.log(contador);
 
-   tecla.onkeydown = function (){
-    tecla.classList.add('ativa');
+   tecla.onkeydown = function (evento){
+       
+    if (evento.code === 'Space' || evento.code ===  'Enter'){
+            tecla.classList.add('ativa');
+        }
+
    }
 
    tecla.onkeyup = function (){
